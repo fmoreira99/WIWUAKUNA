@@ -21,6 +21,9 @@ import { DashboardComponent } from './pages/admin/dashboard/dashboard.component'
 import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
 import { IndexComponent } from './pages/index/index.component';
 import { ResultComponent } from './pages/result/result.component';
+import { TanimalComponent } from './pages/user/tanimal/tanimal.component';
+import { TgestacionComponent } from './pages/user/tgestacion/tgestacion.component';
+import { FormanimalComponent } from './pages/user/formanimal/formanimal.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { ResultComponent } from './pages/result/result.component';
     DashboardComponent,
     UserDashboardComponent,
     IndexComponent,
-    ResultComponent
+    ResultComponent,
+    TanimalComponent,
+    TgestacionComponent,
+    FormanimalComponent
   ],
   imports: [
     BrowserModule,

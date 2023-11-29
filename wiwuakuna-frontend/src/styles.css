@@ -251,8 +251,8 @@ body {
 }
 
 .btn_personal {
-    color: #fff;
-    background: #2E8540;
+    color: #fff !important;
+    background: #035936 !important;
     border: none;
     font-weight: bold;
     float: right;

@@ -13,7 +13,7 @@ export class LoginService {
 
   public generateToken(loginDara:any)
   {
-    return this.httpClient.post(`${baseUrl}/generate-token`, loginDara)
+    return this.httpClient.post(`${baseUrl}/auth/v1/generate-token`, loginDara)
   }
   public loginUser(token:any)
   {
@@ -47,11 +47,20 @@ export class LoginService {
   {
     localStorage.setItem('user',JSON.stringify(user));
   }
+  public getUserName()
+  {
+    let user = this.getUser();
+    return  user.username;
+  }
   public getUser()
   {
-    let user=localStorage.getItem('user');
-    return user!=null ? JSON.parse(user): this.logout;
-
+    let userStr = localStorage.getItem('user');
+    if(userStr != null){
+      return JSON.parse(userStr);
+    }else{
+      this.logout();
+      return null;
+    }
   }
   public getUserRole()
   {
@@ -60,6 +69,6 @@ export class LoginService {
   }
   public getCurrentUser()
   {
-    return this.httpClient.get(`${baseUrl}/actual-usuario`)
+    return this.httpClient.get(`${baseUrl}/auth/v1/actual-usuario`)
   }
 }

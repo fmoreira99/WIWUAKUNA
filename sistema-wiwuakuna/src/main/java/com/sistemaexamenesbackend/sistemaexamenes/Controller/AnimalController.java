@@ -26,11 +26,8 @@ import javax.ws.rs.Consumes;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.util.HashSet;
+import java.util.*;
 
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 @RestController
@@ -94,6 +91,12 @@ public class AnimalController {
     public Set<Animal>  mylistAnimal( @RequestParam("username") String username) {
         User user=userService.ObtenerUsuario(username);
         Set<Animal>  list= iUserAnimal.buscarAnimalesDelUsuario(user);
+        return list;
+    }
+    @GetMapping("/search/categoria")
+    public List<typeAnimal>  mylistAnimalCategoria( ) {
+
+        List<typeAnimal>  list= typeAnimalRespository.findAll();
         return list;
     }
 }

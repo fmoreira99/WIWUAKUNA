@@ -26,15 +26,14 @@ public class Animal {
     private String description;
     @Column(name = "count_animal")
     private Integer countAnimal;
-   // private Double price;
+    private Double price;
     @Column(name = "date_registre")
     private String dateRegistre;
     private String genero;
     @ManyToOne
     @JoinColumn(name = "type_animal_id")
-    @JsonIgnore
     private typeAnimal tipo;
-   private String incubation_state;
+    private String incubation_state;
     private String incubationdate;
     @Column(name = "incubation_description")
     private String  incubationDescription;

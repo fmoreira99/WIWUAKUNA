@@ -1,5 +1,7 @@
 package com.sistemaexamenesbackend.sistemaexamenes.entitys;
 
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.JsonAppend;
 import lombok.*;
 
 import javax.persistence.*;
@@ -17,8 +19,8 @@ public class typeAnimal {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String typeName;
-
     @OneToMany(mappedBy = "tipo")
+    @JsonBackReference
     private List<Animal> animales;
 
 }

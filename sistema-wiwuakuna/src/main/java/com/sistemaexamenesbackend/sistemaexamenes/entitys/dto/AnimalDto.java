@@ -16,6 +16,7 @@ import java.util.Date;
 @NoArgsConstructor
 public class AnimalDto {
 
+    private Long id;
     private String name;
     private String description;
     private Integer countAnimal;

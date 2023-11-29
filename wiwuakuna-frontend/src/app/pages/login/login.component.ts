@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit{
             let roleUser=this.loginService.getUserRole();
             if(roleUser==="ADMIN")
             {
-             window.location.href='/admin'
+              window.location.href='/user-dashboard'
             }else if(roleUser==="NORMAL"){
               window.location.href='/user-dashboard'
             } else
