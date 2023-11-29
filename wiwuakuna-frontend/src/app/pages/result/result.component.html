@@ -1,0 +1,60 @@
+ <div class="container">
+  <div class="row p-3  justify-content-center"  >
+    <div  *ngFor="let item of data" class="col-lg-6 col-sm-6">
+      <div class="card m-3  " style=" max-height: 550px; ">
+        <div class="row g-0 ">
+          <div class="col-md-4" style="max-height: 230px; height: 230px;">
+
+            <img style="width: 100%; height: 100%; object-fit: cover;"
+              src="https://www.molinoschampion.com/wp-content/uploads/2022/06/5-consejos-para-iniciar-un-criadero-de-gallinas-1170x658.jpg"
+              class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title" style="font-weight: bold;">{{ item.name }}</h5>
+              <div class="row  d-flex justify-content-between">
+                <div class="col-lg-3 " style="text-align: center;color: #494a4c;">
+                  <div class="letraLeangue " style="font-size: 13px; font-weight: bold; text-align: left;">
+                    Precio</div>
+                  <div class="letraLeangue " style="font-size: 20px; font-weight: bold;">${{ item.price }} c/u</div>
+                </div>
+                <div class="col-lg-3  ">
+                  <div class="letraLeangue color_principal_verde" style="font-size: 13px;text-align: left;">Género
+                  </div>
+                  <div class="letraLeangue color_principal_verde" style="font-size: 20px;">{{ item.genero }}</div>
+
+                </div>
+
+                <div class="col-lg-3 " style="text-align: center;color: #494a4c;">
+                  <div class="letraLeangue " style="font-size: 13px; font-weight: bold; text-align: left;">Cantidad
+                  </div>
+                  <div class="letraLeangue " style="font-size: 20px; font-weight: bold; text-align: left;">
+                    {{ item.countAnimal }} </div>
+                </div>
+
+                <div class="col-lg-3 " style="text-align: end; color:#DD2C00 ;">
+                  <div class="letraLeangue " style="font-size: 13px; font-weight: bold; text-align: left;">Busqueda
+                  </div>
+                  <div class="d-flex" style="float: right;">
+                    <div class="letraLeangue depues" style="font-size: 20px; font-weight: bold; ">1</div>
+                    <img style="width: 25px; height: 25px;" src="https://img.icons8.com/color/96/fire-element--v1.png"
+                      alt="fire-element--v1" />
+                  </div>
+
+                </div>
+              </div>
+              <p class="card-text mt-3">${{ item.description }}</p>
+              <a></a>
+              <a style="position: absolute; right: 10px;bottom: 10px; color: #949494;" onclick=""><i
+                  class="bi bi-star-fill"></i></a>
+              <p class="card-text mt-3"><small class="text-body-secondary">Publicado en {{ item.dateRegistre }}</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+ </div>
+ 

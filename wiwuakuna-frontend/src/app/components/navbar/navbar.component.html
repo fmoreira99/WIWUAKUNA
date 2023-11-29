@@ -1,0 +1,36 @@
+<mat-toolbar class="navbar-c " style="background: #035936;" >
+  <a [routerLink]="'/'" mat-icon-button arial-label="Example icon-button with menu icon">
+    
+  </a>
+  
+  <div    *ngIf="vali" class="input-group padding-input" >
+    <input #myInputBusqueda type="text" class="form-control"  aria-describedby="button-addon2">
+    <button (click)=" clickButton(myInputBusqueda.value)" class="btn btn-outline-secondary" type="button" style="background: #fff;" id="button-addon2"><i class="bi bi-search"></i> Buscar</button>
+  </div>
+  <span class="example-spacer"></span>
+  <a *ngIf="!login.isLoggedIn()" class="btn " [routerLink]="'/index'" aria-label="Example icon-button with heart icon">
+    <mat-icon>home</mat-icon> Iniciar 
+  </a>
+  <a *ngIf="!login.isLoggedIn()" class="btn " [routerLink]="'/login'" aria-label="Example icon-button with heart icon">
+    <mat-icon>store</mat-icon>Tienda 
+  </a>
+  <a *ngIf="!login.isLoggedIn()" class="btn " [routerLink]="'/login'" aria-label="Example icon-button with heart icon">
+    <mat-icon>account_circle</mat-icon> Iniciar sesión
+  </a>
+  <a *ngIf="!login.isLoggedIn()" [routerLink]="'/signup'" class="btn " aria-label="Example icon-button with heart icon">
+    <mat-icon>perm_identity</mat-icon> Registrar
+  </a>
+  <a *ngIf="login.isLoggedIn()" [routerLink]="'/login'" (click)="logout()" class="btn ">
+    <mat-icon>settings_power</mat-icon> Cerrar sesión
+  </a>
+
+  <button
+  *ngIf = "isLoggedIn && user"
+  mat-button
+  style="margin-right: 10px"
+  class="example-icon favorite-icon"
+  aria-label="Example icon-button with heart icon"
+>
+  {{ user.username }}
+</button>
+</mat-toolbar>

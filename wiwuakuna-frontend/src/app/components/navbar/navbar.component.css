@@ -1,0 +1,25 @@
+.example-spacer{
+    flex: 1 1 auto;
+    
+  }
+  .navbar-c
+  {
+    height: auto;
+   
+  }
+.navbar-c 
+a{
+    width: auto;    
+    margin: 10px;
+    color: white;
+    display: flex;
+    gap: 5px;
+
+}
+.padding-input {
+ width: 500px;
+}
+.padding-input  button{
+  color: #035936;
+  font-weight: bold;
+ }

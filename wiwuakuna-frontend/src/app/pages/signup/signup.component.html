@@ -1,0 +1,79 @@
+
+<div style="height: 90vh;width: 100%;">
+<img style="position: absolute; top: 0px;height: 100%;width: 100%; z-index: -1;"
+     src="https://res.cloudinary.com/dpqnphzwa/image/upload/v1701095166/ojfgxpzomgecexnmjkhl.svg">
+    <div class="container pt-3">
+        <div class="row justify-content-center ">
+            
+            <div style="background: #fff; border-radius: 0px;" class="p-5 col-md-6 sombras ">
+                <div class=" d-flex justify-content-start align-items-center mb-3">
+                    <img style="width: 50px; margin-right: 20px; margin-top: -10px; "
+                        src="https://res.cloudinary.com/dpqnphzwa/image/upload/v1701095158/xx3noqxfyvlaihn4tciv.png">
+                    <div style="font-size: 30px;" class="text-center letraLeangue color_principal_verde">
+                        FORMULARIO DE REGISTRO</div>
+                </div>
+                <div class="row">
+                    <form class="row" (ngSubmit) = "formSubmit()">
+                   
+                    <div class="col-lg-6 mb-2">
+                        <div class="form-group">
+                            <label class=" letraLeangue color_principal_verde" for="nombre ">Nombre</label>
+                            <input required [(ngModel)] = "user.nombre" name = "nombre" matInput  type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+                        </div>
+                    </div>
+                    <div class="col-lg-6  mb-2">
+                        <div class="form-group">
+                            <label class=" letraLeangue color_principal_verde" for="usuario">Nombre de Usuario</label>
+                            <input   [(ngModel)] = "user.username" name = "username"  matInput  type="text" class="form-control" id="usuario"
+                                placeholder="Ingrese su nombre de usuario">
+                        </div>
+                    </div>
+                    <div class="col-lg-6  mb-2">
+
+                        <div class="form-group">
+                            <label class=" letraLeangue color_principal_verde" for="apellido">Apellido</label>
+                            <input required [(ngModel)] = "user.apellido" name = "apellido" matInput type="text" class="form-control" id="apellido" placeholder="Ingrese su apellido">
+                        </div>
+
+                    </div>
+                
+                    <div class="col-lg-6  mb-2">
+                        <div class="form-group">
+                            <label class=" letraLeangue color_principal_verde" for="fecha_nacimiento">Fecha de Nacimiento</label>
+                            <input required [(ngModel)] = "user.fnacimiento" name = "fnacimiento" matInput type="date" class="form-control" id="fecha_nacimiento">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label class=" letraLeangue color_principal_verde" for="direccion">Telefono</label>
+                            <input required [(ngModel)] = "user.telefono" name = "telefono" type="number" matInput  type="text" class="form-control" id="direccion" placeholder="Ingrese su dirección">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label class=" letraLeangue color_principal_verde" for="correo">Correo Electrónico</label>
+                            <input required [(ngModel)] = "user.email" name = "email" type="email" matInput type="email" class="form-control" id="correo"
+                                placeholder="Ingrese su correo electrónico">
+                        </div>
+                    </div>
+                    <div class="col-lg-12 mt-4">
+                        <button type="submit"  style="width: 100%; 
+                        background: #035936; color: #fff;" class="btn  btn-block">Registrarse</button>
+                    </div>
+                    <div class="col-lg-6 mt-2">
+                        <a href="#"  style="width: 100%; background: #1282c4; color: #fff;" class="btn  btn-block">
+                            <i class="bi bi-facebook"></i> Entra con Facebook
+                        </a>
+                    </div>
+                    <div class="col-lg-6 mt-2">
+                        <a href="#"  style="width: 100%; background: #ec4444; color: #ffffff;" class="btn  btn-block">
+                            <i class="bi bi-google"></i> Entra con Google
+                        </a>
+                    </div>
+                </form>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
