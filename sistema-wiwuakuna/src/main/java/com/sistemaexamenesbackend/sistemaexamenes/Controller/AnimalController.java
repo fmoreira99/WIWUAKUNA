@@ -88,10 +88,26 @@ public class AnimalController {
     }
 
     @GetMapping("/animalbyUser")
-    public Set<Animal>  mylistAnimal( @RequestParam("username") String username) {
+    public Set<AnimalDto>  mylistAnimal( @RequestParam("username") String username) {
         User user=userService.ObtenerUsuario(username);
         Set<Animal>  list= iUserAnimal.buscarAnimalesDelUsuario(user);
-        return list;
+        Set<AnimalDto> dtos = new HashSet<>();
+        for (Animal entidad : list) {
+            dtos.add(AnimalDto.builder()
+                            .id(entidad.getId())
+                            .incubationState(entidad.getIncubation_state())
+                            .incubationDescription(entidad.getIncubationDescription())
+                             .state(entidad.getState())
+                            .name(entidad.getName())
+                            .description(entidad.getDescription())
+                            .strTipo(entidad.getTipo().getTypeName())
+                            .genero(entidad.getGenero())
+                            .dateRegistre(entidad.getDateRegistre())
+                    .countAnimal(entidad.getCountAnimal())
+                     .build());
+        }
+        return dtos;
+
     }
     @GetMapping("/search/categoria")
     public List<typeAnimal>  mylistAnimalCategoria( ) {

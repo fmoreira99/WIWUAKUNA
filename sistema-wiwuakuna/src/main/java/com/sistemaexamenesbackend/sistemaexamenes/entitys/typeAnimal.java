@@ -20,7 +20,6 @@ public class typeAnimal {
     private Long id;
     private String typeName;
     @OneToMany(mappedBy = "tipo")
-    @JsonBackReference
     private List<Animal> animales;
 
 }

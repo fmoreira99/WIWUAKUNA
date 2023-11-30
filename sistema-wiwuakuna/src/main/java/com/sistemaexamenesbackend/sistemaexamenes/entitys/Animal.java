@@ -1,8 +1,6 @@
 package com.sistemaexamenesbackend.sistemaexamenes.entitys;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.*;
 import lombok.*;
 
 import javax.persistence.*;
@@ -32,6 +30,7 @@ public class Animal {
     private String genero;
     @ManyToOne
     @JoinColumn(name = "type_animal_id")
+    @JsonIgnore
     private typeAnimal tipo;
     private String incubation_state;
     private String incubationdate;
@@ -41,7 +40,13 @@ public class Animal {
     @OneToMany(cascade= CascadeType.ALL, fetch = FetchType.LAZY,mappedBy = "animal")
     @JsonIgnore
     private Set<UserAnimal> userAnimals= new HashSet<>();
-
+    @JsonProperty("tipo")
+    public Long getTipoId() {
+        if (tipo != null) {
+            return tipo.getId();
+        }
+        return null;
+    }
 
 
 }

@@ -24,7 +24,9 @@ public class AnimalDto {
     private String dateRegistre;
     private String genero;
     private Long tipo;
+    private String strTipo;
     private Date incubationdate;
     private String  incubationDescription;
-    private Integer incubationState;
+    private String incubationState;
+    private Integer state;
 }

@@ -32,8 +32,6 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
     private   JwtAuthenticationEntryPoin jwtAuthenticationEntryPoin;
     @Autowired
     private ImplUserDetailsService userDetailsService;
-
-
     @Override
     @Bean
     public AuthenticationManager authenticationManagerBean() throws Exception {
