@@ -1,0 +1,13 @@
+label{
+    font-weight: bold;
+}
+input
+{
+    border: 1px solid #035936 !important;
+}
+textarea{
+    border: 1px solid #035936 !important;
+}
+select{
+    border: 1px solid #035936 !important;
+}

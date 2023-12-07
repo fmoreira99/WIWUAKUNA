@@ -1,0 +1,32 @@
+.info-element
+{
+    & div{
+        margin-right: 10px;
+        color: #222020 !important;
+        font-weight: bold;
+        justify-content: center;
+        align-items: center;
+         & img {
+            margin: 10px;
+            
+         }
+    }
+}
+
+.menu-dashboard li  a
+{
+    color: #222020 ;
+    font-weight: bold;
+    font-size: 15px;
+    background: #dbdadabb;
+    border-radius: 20px;
+    margin: 10px 10px 0px 0px;
+}
+.activo-dashboard
+{
+    background-color: #477543 !important;
+    color: white !important;
+}
+a:hover {
+    cursor: pointer;
+ }

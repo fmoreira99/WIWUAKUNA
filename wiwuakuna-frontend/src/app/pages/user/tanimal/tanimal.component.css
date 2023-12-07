@@ -1,0 +1,46 @@
+.color_vendido {
+    color: #3aa330 !important;
+    background-color: #3aa330 !important;
+}
+
+.en_venta {
+    color: #16a5aa !important;
+}
+
+.gestacion {
+    color: #e2742a !important;
+}
+
+.murio {
+    color: #222020 !important;
+}
+
+.solo_solo_registrado {
+    color: #fd3b0a !important;
+    background-color: #3aa330 !important;
+}
+
+table thead tr th {
+    background: rgb(179, 211, 179);
+    font-weight: bold;
+    font-size: 17px;
+    text-align: center;
+}
+
+.conte-table::-webkit-scrollbar {
+    width: 12px;
+    /* width of the entire scrollbar */
+}
+
+.conte-table::-webkit-scrollbar-track {
+    background: rgb(196, 196, 196);
+    /* color of the tracking area */
+}
+
+.conte-table::-webkit-scrollbar-thumb {
+    background-color: rgb(64, 128, 85);
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+
+}

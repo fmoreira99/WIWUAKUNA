@@ -107,7 +107,6 @@ public class AnimalController {
                      .build());
         }
         return dtos;
-
     }
     @GetMapping("/search/categoria")
     public List<typeAnimal>  mylistAnimalCategoria( ) {

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { TiendaComponent } from './pages/tienda/tienda.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
 import { IndexComponent } from './pages/index/index.component';
@@ -47,6 +48,11 @@ const routes: Routes = [
     component : UserDashboardComponent,
     pathMatch : 'full',
     canActivate:[NormalGuard]
+  },
+  {
+    path:'tienda',
+    component : TiendaComponent,
+    pathMatch : 'full'    
   }
 ];
 

@@ -1,18 +1,27 @@
-<mat-toolbar class="navbar-c " style="background: #035936;" >
-  <a [routerLink]="'/'" mat-icon-button arial-label="Example icon-button with menu icon">
-    
-  </a>
-  
-  <div    *ngIf="vali" class="input-group padding-input" >
-    <input #myInputBusqueda type="text" class="form-control"  aria-describedby="button-addon2">
-    <button (click)=" clickButton(myInputBusqueda.value)" class="btn btn-outline-secondary" type="button" style="background: #fff;" id="button-addon2"><i class="bi bi-search"></i> Buscar</button>
+<mat-toolbar class="navbar-c " style="background: #035936;">
+  <div [routerLink]="'/'" class="letraLeangue"  style="display: flex; 
+    height: 50px;width: 50px; border-radius: 50%; margin-left: 100px; position: relative;">
+      <img style="height: 50px;width: 50px; object-fit: contain; border-radius: 50%; "
+           src="https://res.cloudinary.com/dpqnphzwa/image/upload/v1701746901/m7stzs0cz4jyclqrro0u.png">
+    <div class="m-2 d-block" style="line-height: 10%; color: #fff;">
+      <h1 style="font-size: 25px; ">
+        WIWUAKUNA
+      </h1>   
+      <span>Modernizamos el mundo del campo</span>
+    </div>           
+  </div>
+
+  <div *ngIf="vali" class="input-group padding-input">
+    <input #myInputBusqueda type="text" class="form-control" aria-describedby="button-addon2">
+    <button (click)=" clickButton(myInputBusqueda.value)" class="btn btn-outline-secondary" type="button"
+      style="background: #fff;" id="button-addon2"><i class="bi bi-search"></i> Buscar</button>
   </div>
   <span class="example-spacer"></span>
-  <a *ngIf="!login.isLoggedIn()" class="btn " [routerLink]="'/index'" aria-label="Example icon-button with heart icon">
-    <mat-icon>home</mat-icon> Iniciar 
+  <a  class="btn " [routerLink]="'/'" aria-label="Example icon-button with heart icon">
+    <mat-icon>home</mat-icon> Iniciar
   </a>
-  <a *ngIf="!login.isLoggedIn()" class="btn " [routerLink]="'/login'" aria-label="Example icon-button with heart icon">
-    <mat-icon>store</mat-icon>Tienda 
+  <a  class="btn " [routerLink]="'/tienda'" aria-label="Example icon-button with heart icon">
+    <mat-icon>store</mat-icon>Tienda
   </a>
   <a *ngIf="!login.isLoggedIn()" class="btn " [routerLink]="'/login'" aria-label="Example icon-button with heart icon">
     <mat-icon>account_circle</mat-icon> Iniciar sesión
@@ -20,17 +29,13 @@
   <a *ngIf="!login.isLoggedIn()" [routerLink]="'/signup'" class="btn " aria-label="Example icon-button with heart icon">
     <mat-icon>perm_identity</mat-icon> Registrar
   </a>
+
+  <button *ngIf="isLoggedIn && user" mat-button [routerLink]="'/user-dashboard'"
+    style="margin-right: 10px; color: white; font-weight: bold;" class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon">
+    <mat-icon>perm_identity</mat-icon>Mi perfi: {{ user.username }}
+  </button>
   <a *ngIf="login.isLoggedIn()" [routerLink]="'/login'" (click)="logout()" class="btn ">
     <mat-icon>settings_power</mat-icon> Cerrar sesión
   </a>
-
-  <button
-  *ngIf = "isLoggedIn && user"
-  mat-button
-  style="margin-right: 10px"
-  class="example-icon favorite-icon"
-  aria-label="Example icon-button with heart icon"
->
-  {{ user.username }}
-</button>
 </mat-toolbar>

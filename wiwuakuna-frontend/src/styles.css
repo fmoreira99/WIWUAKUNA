@@ -572,19 +572,7 @@ body {
     /* overflow-x: hidden; */
 }
 
-body::-webkit-scrollbar {
-    width: 12px;               /* width of the entire scrollbar */
-  }
-  
-  body::-webkit-scrollbar-track {
-    background: rgb(27, 27, 27);        /* color of the tracking area */
-  }
-  
-  body::-webkit-scrollbar-thumb {
-    background-color: rgb(61, 61, 61);    /* color of the scroll thumb */
-    border-radius: 20px;       /* roundness of the scroll thumb */
-  
-  }
+
 
   .lis {
     list-style: none;

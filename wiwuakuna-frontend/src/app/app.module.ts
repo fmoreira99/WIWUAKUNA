@@ -24,6 +24,8 @@ import { ResultComponent } from './pages/result/result.component';
 import { TanimalComponent } from './pages/user/tanimal/tanimal.component';
 import { TgestacionComponent } from './pages/user/tgestacion/tgestacion.component';
 import { FormanimalComponent } from './pages/user/formanimal/formanimal.component';
+import { RegisterComponent } from './pages/user/register/register.component';
+import { TiendaComponent } from './pages/tienda/tienda.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { FormanimalComponent } from './pages/user/formanimal/formanimal.componen
     ResultComponent,
     TanimalComponent,
     TgestacionComponent,
-    FormanimalComponent
+    FormanimalComponent,
+    RegisterComponent,
+    TiendaComponent
   ],
   imports: [
     BrowserModule,
