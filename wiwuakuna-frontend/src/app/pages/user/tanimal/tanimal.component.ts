@@ -14,6 +14,9 @@ export class TanimalComponent implements OnInit, DoCheck {
   ngOnInit(): void {
     this.getAnimalByUsername()
   }
+  eliminarAnimal(id:number){
+
+  }
   getAnimalByUsername()
   {
     this.animalService.getAnimalByUser().subscribe((data:any)=>{

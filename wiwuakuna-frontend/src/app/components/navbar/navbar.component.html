@@ -1,4 +1,4 @@
-<mat-toolbar class="navbar-c " style="background: #035936;">
+<mat-toolbar class="navbar-c " style="background: #13714c;">
   <div [routerLink]="'/'" class="letraLeangue"  style="display: flex; 
     height: 50px;width: 50px; border-radius: 50%; margin-left: 100px; position: relative;">
       <img style="height: 50px;width: 50px; object-fit: contain; border-radius: 50%; "
@@ -7,8 +7,9 @@
       <h1 style="font-size: 25px; ">
         WIWUAKUNA
       </h1>   
-      <span>Modernizamos el mundo del campo</span>
-    </div>           
+      <span *ngIf="!vali"  style="font-size: 15px;">Modernizamos el mundo del campo</span>
+    </div> 
+     
   </div>
 
   <div *ngIf="vali" class="input-group padding-input">
@@ -21,7 +22,7 @@
     <mat-icon>home</mat-icon> Iniciar
   </a>
   <a  class="btn " [routerLink]="'/tienda'" aria-label="Example icon-button with heart icon">
-    <mat-icon>store</mat-icon>Tienda
+    <mat-icon>store</mat-icon>Novedades
   </a>
   <a *ngIf="!login.isLoggedIn()" class="btn " [routerLink]="'/login'" aria-label="Example icon-button with heart icon">
     <mat-icon>account_circle</mat-icon> Iniciar sesión
